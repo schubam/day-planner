@@ -1,0 +1,27 @@
+.card {
+    width: 90%;
+    margin-top: 0 auto 10px;
+    background: #aaa;
+    min-height: 50px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    transition: .15s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card .title {
+    padding: 5px 10px;
+    border-bottom: 1px solid #dbdbdb;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.card .nutrition {
+    padding: 10px;
+    zoom: 1;
+}
+
+.attribute {
+    padding: 5px 10px;
+}
