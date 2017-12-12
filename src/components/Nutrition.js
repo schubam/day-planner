@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Summary.css';
+import './Nutrition.css';
 
-const Summary = (props) => {
+const Nutrition = (props) => {
     return (
-        <div className='summary'>
+        <div className='nutrition'>
             <span className='attribute'>{props.calories} kcal</span>
             <span className='attribute'>{props.fat} Fat</span>
             <span className='attribute'>{props.carbs} Carbs</span>
@@ -12,4 +12,4 @@ const Summary = (props) => {
     );
 }
 
-export default Summary;
+export default Nutrition;

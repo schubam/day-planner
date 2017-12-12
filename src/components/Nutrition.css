@@ -1,0 +1,9 @@
+.nutrition {
+    /* background-color: #b85eca; */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nutrition .attribute {
+    /* background-color: yellow; */
+}

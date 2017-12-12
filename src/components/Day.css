@@ -1,20 +1,14 @@
-.day {
-    width: 400px;
-    display: inline-block;
-    height: 100%;
-    overflow: hidden;
-    min-height: 100px;
-    background-color: #e2e4e6;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
-    border-radius: 3px;
-    padding-bottom: 20px;
-    margin-right: 20px;
-    vertical-align: top;
+.day-container {
+    width: 380px;
+    min-height: 200px;
+    background-color: #cacaca;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
 }
 
-.day .title {
-    padding: 5px 10px;
-    border-bottom: 1px solid #dbdbdb;
-    white-space: normal;
-    word-break: break-all;
+.day-container > .title {
+    /* background-color: #94bb7e; */
+   text-align: center; 
+   color: #666;
 }
