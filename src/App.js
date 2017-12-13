@@ -5,7 +5,10 @@ import Day from './components/Day'
 class App extends Component {
   render() {
     return (
-      <Day />
+      <div className='week-container'>
+        <Day />
+        <Day />
+      </div>
     );
   }
 }

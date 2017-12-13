@@ -2,44 +2,44 @@ import React, { Component } from 'react';
 import './Day.css'
 import Card from './Card'
 import Nutrition from './Nutrition'
+import Remote from './Remote'
 
 class Day extends React.Component {
     constructor(props) {
         super(props);
-        const breakfast = {
+        this.breakfast = {
             title: "Porridge",
             calories: 243,
             fat: 12,
             carbs: 245,
             protein: 25
         };
-
-        const lunch = {
+        this.lunch = {
             title: "Chicken with Brokkoli",
             calories: 423,
             fat: 21,
             carbs: 45,
             protein: 125
         };
-
-        const dinner = {
+        this.dinner = {
             title: "Chickpea-Curry",
             calories: 379,
             fat: 12,
             carbs: 45,
             protein: 52
         };
-        this.breakfast = breakfast;
-        this.lunch = lunch;
-        this.dinner = dinner;
+        this.calculateSum = function(field) {
+            const meals = [this.breakfast[field], this.lunch[field], this.dinner[field]];
+            return meals.reduce((a,b) => a+b, 0)
+        };
     }
 
     sumOfNutrition() {
         return {
-            calories: [this.breakfast.calories, this.lunch.calories, this.dinner.calories].reduce((a,b) => a+b, 0),
-            fat: [this.breakfast.fat, this.lunch.fat, this.dinner.fat].reduce((a,b) => a+b, 0),
-            carbs: [this.breakfast.carbs, this.lunch.carbs, this.dinner.carbs].reduce((a,b) => a+b, 0),
-            protein: [this.breakfast.protein, this.lunch.protein, this.dinner.protein].reduce((a,b) => a+b, 0)
+            calories: this.calculateSum("calories"),
+            fat: this.calculateSum("fat"),
+            carbs: this.calculateSum("carbs"),
+            protein: this.calculateSum("protein"),
         };
     }
 
@@ -47,6 +47,7 @@ class Day extends React.Component {
         return (
             <div className='day-container'>
                 <div className='title'>Monday 18.12.2017</div>
+                <Remote />
                 <Card {...this.breakfast} />
                 <Card {...this.lunch} />
                 <Card {...this.dinner} />
