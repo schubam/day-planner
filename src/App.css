@@ -5,3 +5,7 @@
 .week-container {
     display: flex;
 }
+
+.app {
+    display: flex;
+}

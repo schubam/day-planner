@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Day.css'
 import Card from './Card'
 import Nutrition from './Nutrition'
-import Remote from './Remote'
 
 class Day extends React.Component {
     constructor(props) {
@@ -46,8 +45,7 @@ class Day extends React.Component {
     render(props) {
         return (
             <div className='day-container'>
-                <div className='title'>Monday 18.12.2017</div>
-                <Remote />
+                <div className='title'>{this.props.title}</div>
                 <Card {...this.breakfast} />
                 <Card {...this.lunch} />
                 <Card {...this.dinner} />
