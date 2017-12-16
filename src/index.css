@@ -8,3 +8,7 @@ body {
   min-width: 500px;
   max-width: 500px;
 }
+
+#selected-foods-header {
+  text-align: center;
+}
