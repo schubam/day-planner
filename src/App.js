@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Day from './components/Day'
+// import Day from './components/Day'
 import FoodSearch from './components/FoodSearch'
 import SelectedFoods from './components/SelectedFood'
 

@@ -9,7 +9,7 @@ function sum(foods, prop) {
 
 class SelectedFoods extends React.Component {
     state = {
-        selectedIndexes: new Map
+        selectedIndexes: new Map()
     };
 
     toggleSelection = (idx) => {

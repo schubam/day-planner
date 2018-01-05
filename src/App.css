@@ -9,3 +9,7 @@
 .app {
     display: flex;
 }
+
+.glyphicon-trash {
+    cursor: pointer;
+}
