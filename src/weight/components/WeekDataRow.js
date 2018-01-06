@@ -1,6 +1,5 @@
 import React from "react";
-import WeekDataField from "./WeekDataField";
-import WeekDataInputField from "./WeekDataInputField";
+import WeekDataInputField from "../containers/WeekDataInputField";
 
 const WeekDataRow = ({ week, columns }) => (
   <tr>

@@ -2,7 +2,8 @@ import { combineReducers } from "redux";
 import days from "./days";
 
 const weightTableApp = combineReducers({
-  days
+  weeks: days,
+  columns: days,
 });
 
 export default weightTableApp;
