@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {colSpan} from "../support/columns";
+import { colSpan } from "../support/columns";
 
 const HeaderRow = ({ label }) => (
   <tr>
@@ -9,7 +9,7 @@ const HeaderRow = ({ label }) => (
 );
 
 HeaderRow.propTypes = {
-    label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired
 };
 
 export default HeaderRow;

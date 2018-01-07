@@ -4,14 +4,24 @@ import HeaderRow from "./HeaderRow";
 import WeightRowContainer from "../containers/WeightRowContainer";
 import { capitalizedColumns } from "../support/columns";
 
+const weekData = weeks => {
+  let array = [];
+  // weeks.map(() => [<HeaderRow />, <WeightRowContainer />]);
+  weeks.forEach((value, key) => {
+    array.push([
+      <HeaderRow label={key} />,
+      <WeightRowContainer weekId={key} />
+    ]);
+  });
+  return array;
+};
+
 const WeightTable = ({ weeks }) => (
   <table border="1">
     <thead>
-      <tr>{capitalizedColumns.map(label => <th key={label}>{label}</th>)}</tr>
+      <tr>{capitalizedColumns.map(l => <th key={l}>{l}</th>)}</tr>
     </thead>
-    <tbody>
-      {weeks.map((week, i) => [<HeaderRow />, <WeightRowContainer id={i} />])}
-    </tbody>
+    <tbody>{weekData(weeks)}</tbody>
   </table>
 );
 
