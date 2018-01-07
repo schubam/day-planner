@@ -12,27 +12,9 @@ for (let i = 0; i < 2; i++) {
     sunday: 123.3
   });
 }
-const COLUMNS = [
-  "monday",
-  "tuesday",
-  "wednesday",
-  "thursday",
-  "friday",
-  "saturday",
-  "sunday"
-  // "Average",
-  // "Median",
-  // "Delta",
-  // "BMI"
-];
 
-const initialState = {
-  weeks: DATA,
-  columns: COLUMNS
-};
-
-const days = (state = initialState, action) => {
-    switch (action.type) {
+const weights = (state = DATA, action) => {
+  switch (action.type) {
     case "ADD_WEIGHT":
       return [...state, { id: action.id, value: action.value }];
     default:
@@ -40,4 +22,4 @@ const days = (state = initialState, action) => {
   }
 };
 
-export default days;
+export default weights;
