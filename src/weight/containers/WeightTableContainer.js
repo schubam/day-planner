@@ -15,6 +15,7 @@ export const measurementsByWeeks = measurements => {
 };
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
     weeks: measurementsByWeeks(state.measurements)
   };

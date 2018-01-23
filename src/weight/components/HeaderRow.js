@@ -9,7 +9,7 @@ const HeaderRow = ({ label }) => (
 );
 
 HeaderRow.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.number.isRequired
 };
 
 export default HeaderRow;

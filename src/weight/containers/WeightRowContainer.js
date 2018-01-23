@@ -17,8 +17,10 @@ export const measurementsByWeek = (data, week) => {
     });
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  row: measurementsByWeek(state.measurements, ownProps.weekId)
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    row: measurementsByWeek(state.measurements, ownProps.weekId)
+  };
+};
 
 export default connect(mapStateToProps)(WeightRow);

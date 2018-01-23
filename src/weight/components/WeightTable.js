@@ -6,11 +6,12 @@ import { capitalizedColumns } from "../support/columns";
 
 const weekData = weeks => {
   let array = [];
-  // weeks.map(() => [<HeaderRow />, <WeightRowContainer />]);
-  weeks.forEach((value, key) => {
+
+  weeks.forEach((days, weekNumber) => {
+    console.log(days, weekNumber);
     array.push([
-      <HeaderRow label={key} />,
-      <WeightRowContainer weekId={key} />
+      <HeaderRow key={weekNumber} label={weekNumber} />,
+      <WeightRowContainer key={weekNumber} weekId={weekNumber} />
     ]);
   });
   return array;
@@ -26,19 +27,7 @@ const WeightTable = ({ weeks }) => (
 );
 
 WeightTable.propTypes = {
-  weeks: PropTypes.arrayOf(
-    PropTypes.shape({
-      week: PropTypes.number.isRequired,
-      label: PropTypes.string.isRequired,
-      monday: PropTypes.number,
-      tuesday: PropTypes.number,
-      wednesday: PropTypes.number,
-      thursday: PropTypes.number,
-      friday: PropTypes.number,
-      saturday: PropTypes.number,
-      sunday: PropTypes.number
-    }).isRequired
-  ).isRequired
+  weeks: PropTypes.objectOf(PropTypes.object).isRequired
 };
 
 export default WeightTable;
